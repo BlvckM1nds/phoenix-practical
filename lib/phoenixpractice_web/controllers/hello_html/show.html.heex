@@ -1,2 +1,21 @@
-<.flash_group flash={@flash} />
-<h1>Your message is <%= @msg %></h1>
+<.my_component />
+<h1>Your message is {@msg}</h1>
+
+<p>{if 1 == 1, do: "This is true", else: "This is false"}</p>
+
+<table>
+  <tr>
+    <th>Number</th>
+    
+    <th>Multiply by 2</th>
+  </tr>
+  
+  <%= for n <- 1..10 do %>
+    <tr>
+      <td>{n}</td>
+      
+      <td>{n * 2}</td>
+    </tr>
+  <% end %>
+</table>
+ {raw("<b>Test</b>")}
